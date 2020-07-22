@@ -25,10 +25,10 @@ class Game{
           form.display();
         }
     
-        runner1 = createSprite(100,200);
-        runner2 = createSprite(300,200);
-        runner3 = createSprite(500,200);
-        runner4 = createSprite(700,200);
+        var runner1 = createSprite(100,200);
+        var runner2 = createSprite(300,200);
+        var runner3 = createSprite(500,200);
+        var runner4 = createSprite(700,200);
         runners = [runner1, runner2, runner3, runner4];
       }
     
@@ -61,7 +61,7 @@ class Game{
             if (index === player.index){
               runners[index - 1].shapeColor = "red";
               camera.position.x = displayWidth/2;
-              camera.position.y = cars[index-1].y
+              camera.position.y = runners[index-1].y
             }
            
             //textSize(15);

@@ -1,4 +1,4 @@
-var canvas,playercount,allplayers,database,form,player,game;
+var canvas,playercount,allplayers,database,form,player,game,runners;
 var gamestate=0;
 function setup() {
   canvas=createCanvas(displayWidth-20,displayHeight-30);
