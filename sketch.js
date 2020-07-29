@@ -1,4 +1,4 @@
-var canvas,playercount,allplayers,database,form,player,game,runners,hurdle,hurdles;
+var canvas,playercount,allplayers,database,form,player,game,runners;
 var gamestate=0;
 var i=0;
 function setup() {

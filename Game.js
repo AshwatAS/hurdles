@@ -13,17 +13,6 @@ class Game{
             gamestate:state
         });
     }
-    getCount(){
-      var hurdleref=database.ref("hurdleCount");
-      hurdleref.on("value",function(data){
-        hurdle=data.val();
-      })
-    }
-    updateCount(count){
-      database.ref("/").update({
-        hurdleCount:count
-      })
-    }
     async start(){
         if(gamestate === 0){
           player = new Player();
@@ -41,17 +30,7 @@ class Game{
         var runner3 = createSprite(500,200);
         var runner4 = createSprite(700,200);
         runners = [runner1, runner2, runner3, runner4];
-        var hurdle1=createSprite(100+100,400-400,20,20);
-        var hurdle2=createSprite(300+100,500-500,20,20);
-        var hurdle3=createSprite(500+100,600-600,20,20);
-        var hurdle4=createSprite(700+100,700-700,20,20);
-        var hurdle5=createSprite(100+100,800-1800,20,20);
-        var hurdle6=createSprite(300+100,900-1900,20,20);
-        var hurdle7=createSprite(500+100,1000-2000,20,20);
-        var hurdle8=createSprite(700+100,1100-2100,20,20);
-        var finish=createSprite(500,-2000,1000,20);
-        finish.shapeColor="green";
-        hurdles=[hurdle1,hurdle2,hurdle3,hurdle4,hurdle5,hurdle6,hurdle7,hurdle8];
+        //hurdles=[hurdle1,hurdle2,hurdle3,hurdle4,hurdle5,hurdle6,hurdle7,hurdle8];
       }
     
       play(){
